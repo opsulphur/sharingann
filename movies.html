@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies | Osmatix</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://media.discordapp.net/attachments/931082337771474994/1102665053288800317/IMG-20230502-WA0000.jpg" />
+
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">Osmatix</label>
+    <ul>
+      <li><a class="active" href="https://osmatix.me" target="_self">Home</a></li>
+      <li><a href="https://osmatix.me/about.html" target="_self">About</a></li>
+      <li><a href="https://osmatix.me/whyus.html" target="_self">Why Us?</a></li>
+      <li><a href="https://osmatix.me/rules.html" target="_self">Rules</a></li>
+      <li><button class="profile-icon"><i class="fa fa-user"></i></button></li>
+    </ul>
+
+  </nav>
+  <dialog class="profile-dialog" id="profile-dialog">
+    <div class="dialog-header">
+      <h2>Profile</h2>
+      <button class="close-dialog-button">&#10005;</button>
+    </div>
+    <div class="dialog-body">
+      <label class="email-label"></label>
+      <p class="user-email"></p>
+      <div class="button-container">
+        <button class="signout-button">Sign Out</button>
+      </div>
+    </div>
+  </dialog>
+  <div>
+    <p class="main-text">Here we have a collection of 300+ movies and web series!! Search the movie you want and get
+      direct link for downloading the movie!!
+    </p>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="myInput" placeholder="Search for movies!!">
+    <button type="button" onclick="searchProducts()"><i class="fa fa-search"></i></button>
+  </div>
+
+
+  <div class="product-container" id="products">
+    <div class="product-card">
+      <a
+        href="https://video-downloads.googleusercontent.com/AM87qEqFfBkXWaawWt7_XO-Zp72mconZnaJWUXb-J5S2OqCne6lEn2w7W4HRUZ-oQaG6ZZvbZOx3ss_RlbCbDh-1NmZ93xS5fD9LR0-TpBvFSF5lG2fLL6ydKXVG_r4Y5WJGdCo3dka-4vhNOIHflHQvrNiXwfcOJ7f91Nf9YZJjD2Ckn0p10wFXgwpI_elpRJdleXrxM4jFlONbOn3bJ3WW4aCsPdosci31nbThMKV8X-0JmPedCxMAMmbYkTHyWq8FUIGGsdcX5HXHD0Zc7oBVKYD0kW9GVvi7ffEKIgGaKHFxTurmmGjBmT2ySTgo-Dfl_aIe7y9g9nWldA0J8S5Dm_k_fQ_37I4gb9qiLkNsnjpVnELBMPafJ7PUZgXgVaqUdYxWSgGsr25raQ8lX7C2dp-w0KHA_qNFuKU8xkocyPA5MeseM5JIZx1K2xd3EbrF33iFylwIE4KX0H0PJUdloedHEQlv9mGPEP6LjNjTmFI5_T5wpdUGniNT9TsCey-nxLNLVZfRRnpoZ08Fg045HpBaRR53yPK6UvgqiNFdzjvteXYBzY3n7zdhmrIacjPymepER-HD1dnNBuLKK0VHC8aUHEJqPLjIVGKQ1VUuFHLtvM-A6_uDReICoaqOnl7sWkDisdop7d4myXaiTECbaPxbyoTUC_0jsvL2eLv5H-_PAfNA6QJEBkfB7hYPoN2OwXIXjGpDVTFq2HyxDYBaes7DDqE5Xi7cO8AfHBKAgNYF-4zKckYzjHClihXkn9S5qQ0AbsFMKOJvnnwuSTWeSIPI6TeOmGT8ektYyoP8I1GgEQl2Pux3WaQMFzRFoX0Cooh9asi9URR9zBGhKPFbw9PVvZ1kALEpqczkZliDuerT_9Z0u2YvWOZpaoMPzNlt8CpVhpvK2bp2CzH69neimBqHisOBn4us4GkjciyFLbANPxPqo5-roapuMaU8n-Azkk7OJDg12z3NDMfiUkqMNOntgO_Z4UtFkQg7O5rB0YZQ4p1wFdnnmYdsa7O4gbCgGuPTlH35Rpf0R8pmHcjP4WYPkBe5k2SokOZoity3M_SaVh_-bS0FNScAdCwnziOTnNbGE0Bgf3wAKlJIrLtD0pauGK1SleqbhqHFbbZ0gystdnPewQz4kojfRIFgYXGhdHXaQlpL">
+        <img src="https://catimage.net/images/2023/04/28/3nyMIlmfknVJRlxETTnuFSuVkGz.jpg" alt="Product 1">
+        <h2 class="visually-hidden">U-Turn (2023) (Full Movie)</h2>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a
+        href="https://summer-tree-0640.nobele33164587.workers.dev/1395904845/e21c0157d7baa5966c5b269ec11f010b0b87943976a4993f46c04fffc063034bbffdb52ccce9f6b34a34734ca72985fdc81122c99ab2a07411ed4f4ba356f97ed3880a369dab0d1457a4904e7561f8c7590eaaceae1980130f0e6a80a0600b0481a09a35757d47fcdbd2a060184174f903cf41242aced4b7d49b4d74140c8172::82a7d99c8b0b0a184c4994e67b6d60a0/Tu.Jhoothi.Main.Makkaar.2023.480p.Hindi.WEB-DL.ESub.x264-HDHub4u.Tv.mkv">
+        <img
+          src="https://catimage.net/images/2023/05/03/Tu-Jhoothi-Main-Makkaar-2023-Hindi-Dubbed-HDRip-Full-Movie-HDHub4u.jpg"
+          alt="Product 1">
+        <h2 class="visually-hidden">Tu Jhoothi Main Makkar</h2>
+      </a>
+    </div>
+
+  </div>
+  <hr class="hrop1">
+  <div>
+    <p class="main-text1"> Can't you find your desired movie? No worries!! Request a one and we try to add it ASAP.
+    </p>
+  </div>
+
+  <div class="form-rquest">
+    <form action="process-form.php" method="POST">
+
+      <input type="text" id="movie-request" name="movie-request" placeholder="Enter movie title here">
+      <input type="email" id="email" name="email" placeholder="Enter your email address here">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="noResultsMessage" style="display:none;">No movies found</div>
+
+
+  <hr class="hrop1">
+  <p class="copyright">Copyright 2023 - Osmatix Pvt. Ltd.</p>
+
+
+
+
+
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/641f177631ebfa0fe7f4a126/1gscn7ain';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osmatix</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://media.discordapp.net/attachments/931082337771474994/1102665053288800317/IMG-20230502-WA0000.jpg" />
+
+</head>
+
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">Osmatix</label>
+    <ul>
+      <li><a class="active" href="https://osmatix.me" target="_self">Home</a></li>
+      <li><a href="https://osmatix.me/about.html" target="_self">About</a></li>
+      <li><a href="https://osmatix.me/whyus.html" target="_self">Why Us?</a></li>
+      <li><a href="https://osmatix.me/rules.html" target="_self">Rules</a></li>
+      <li id="signup-button" ><a href="signup.html">Sign Up</a></li>
+      <li><button class="profile-icon"><i class="fa fa-user"></i></button></li>
+      
+      
+    </ul>
+   
+  </nav>
+  <div>
+    <p class="main-text">Welcome to Osmatix!! Our platform provides these benefits as listed below. We are planning to
+      add more features!! Have a nice day :)
+    </p>
+  </div>
+  <div class="all-box">
+    <div class="box box1">
+      <a href="https://osmatix.me/movies.html" target="_self" class="icon">🎥</a>
+      <p>Download Movies</p>
+    </div>
+    <div class="box box2">
+      <a href="https://osmatix.me/top-products.html" target="_self" class="icon">🛒</a>
+      <p>Top Rated Products</p>
+    </div>
+    <div class="box box3">
+      <a href="https://osmatix.me/luckydraw.html" target="_self" class="icon">😀</a>
+      <p>Try our Lucky Draw</p>
+    </div>
+  </div>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/641f177631ebfa0fe7f4a126/1gscn7ain';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <hr class="hrop">
+  <div class="follow-section">
+    <h2>Follow Us NOW!!!</h2>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@sulphurrop" target="_self">
+        <img src="https://img.icons8.com/plasticine/100/null/youtube-play--v2.png" alt="YouTube Icon">
+      </a>
+      <a href="https://telegram.me/cum4myy" target="_self">
+        <img src="https://img.icons8.com/fluency/48/null/telegram-app.png" alt="Telegram Icon">
+      </a>
+      <a href="https://www.instagram.com/_whois.sulphur/" target="_self">
+        <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="Instagram Icon">
+      </a>
+    </div>
+  </div>
+
+  
+
+  <dialog id="profile-dialog" class="profile-dialog">
+    <div class="dialog-header">
+      <h2>Profile</h2>
+      <button class="close-dialog-button">&#10005;</button>
+    </div>
+    <div class="dialog-body">
+      <label class="email-label"></label>
+      <p class="user-email"></p>
+      <div class="button-container">
+      <button class="signout-button">Sign Out</button></div>
+    </div>
+  </dialog>
+  
+  
+  
+</body>
+
+
+
+<hr class="hrop1">
+<p class="copyright">Copyright 2023 - Osmatix Pvt. Ltd.</p>
+
+
+<script src="js.js"></script>
+
+</html>
